@@ -1,0 +1,118 @@
+/////////
+///変数///
+/////////
+
+$fontcolor: white;
+$sc_bgc: black;
+$wrap_bgc: #800000;
+
+////////
+//mixin//
+////////
+@mixin pc {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin font($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+@mixin sectionbase {
+  background-color: $sc_bgc;
+  padding: 100px 0 70px 0;
+}
+@mixin size {
+  width: 100%;
+  height: 100%;
+}
+
+//////////////
+//共通のcss////
+/////////////
+
+body {
+  min-width: 1220px;
+  overflow-x: hidden;
+  font-family: "Sawarabi Mincho", sans-serif;
+  &.menu-open {
+    overflow-y: hidden;
+  }
+  &.menu-open #filter {
+    visibility: visible;
+  }
+  &.menu-open #gloval_nav {
+    right: 0;
+  }
+  &.menu-open #nav_toggle_open span:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+    top: 15px;
+  }
+  &.menu-open #nav_toggle_open span:nth-child(2) {
+    visibility: hidden;
+  }
+  &.menu-open #nav_toggle_open span:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+    top: 35px;
+  }
+  &.book-open {
+    overflow-y: hidden;
+  }
+  &.book-open #book_form {
+    left: 0;
+  }
+  &.book-open #book_button {
+    padding: 93px 31px;
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  width: 85%;
+  height: 100%;
+}
+
+.sc_title {
+  @include font(36px, white);
+  text-align: center;
+}
+.line {
+  text-align: center;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 80px;
+    border: 0.5px solid white;
+    margin-top: 22px;
+  }
+}
+
+//////トップへ戻るボタン/////
+#top_return_bt {
+  @include font(16px, $fontcolor);
+  display: flex;
+  position: fixed;
+  z-index: 80;
+  background: linear-gradient(to bottom, #bf0000, black 115%);
+  letter-spacing: 6px;
+  width: 5vw;
+  padding: 20px;
+  justify-content: center;
+  border: 1px solid white;
+  bottom: 5px;
+  right: 10px;
+  border-radius: 10px;
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    cursor: hand;
+  }
+}

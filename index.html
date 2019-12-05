@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>inouetei</title>
+</head>
+
+<body>
+    <!-- ハンバーガーメニュー -->
+    <div id="filter"></div>
+    <div id="nav_toggle_open">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div id="gloval_nav">
+        <nav>
+            <ul>
+                <li><a href="#about">こだわり</a></li>
+                <li><a href="#menu">お品書き</a></li>
+                <li><a href="#access">アクセス</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ハンバーガーメニュー -->
+    <!--予約フォーム -->
+    <a href="" class="first_bt" id="book_button" data-text-default="ご予&ensp;約はこちら" data-text-clicked="戻る"
+        href="">ご予&ensp;約はこちら</a>
+    <div id="book_form">
+        <h1 class="book_title">予約フォーム</h1>
+        <p class="book_text"><span>※</span>は必須です</p>
+        <form action="" id="form">
+            <div class="book_name">
+                <label for="name">名前<span>※</span></label>
+                <input type="text" name="name" placeholder="名前" id="book_name_input">
+            </div>
+            <div class="book_mail">
+                <label for="email">メールアドレス<span>※</span></label>
+                <input type="mail" name="email" placeholder="xxx@xxx.con">
+            </div>
+            <div class="book_tell">
+                <label for="tell">電話番号<span>※</span></label>
+                <input type="tell" name="tell" placeholder="090-xxxx-xxxx">
+            </div>
+            <div class="book_day_one">
+                <label for="day">予約希望日　第一希望<span>※</span></label>
+                <input type="date"></input>
+            </div>
+            <div class="book_day_secound">
+                <label for="day">予約希望日　第二希望<span>※</span></label>
+                <input type="date"></input>
+            </div>
+            <div class="book_contact">
+                <label for="contact">お問い合わせ</label>
+                <textarea name="contact" id="" cols="50" rows="10" placeholder="人数と時間をご記入ください"></textarea>
+            </div>
+            <div class="book_sent_wrap">
+                <button class="book_sent" id="book_sent">送信</button>
+            </div>
+        </form>
+    </div>
+    <!--予約フォーム -->
+    <!-- topへ戻るボタン -->
+    <button id="top_return_bt">Top</button>
+    <!-- topへ戻るボタン -->
+    <section class="first">
+        <div class="color_box">
+        </div>
+        <div class="inner">
+            <div class="first_wrap">
+                <div class="first_title_wrap">
+                    <h1 class="first_title">井上亭</h1>
+                    <p class="first_text">豚料理専門店</p>
+                </div>
+                <div class="first_img"><img src="./img/tonkatsu.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="inner">
+            <div class="about_wrap">
+                <h1 class="sc_title">こだわり</h1>
+                <div class="line"></div>
+
+                <div class="slideshow">
+                    <ul id="slide_wrap">
+                        <li class="slide_item"><img src="./img/pig1.jpg" alt=""></li>
+                        <li class="slide_item"><img src="./img/pig2.jpg" alt=""></li>
+                        <li class="slide_item"><img src="./img/pig3.jpg" alt=""></li>
+
+                    </ul>
+                </div>
+                <div class="about_content">
+                    <p class="ac_text">
+                        井上亭は、宮崎県に自社経営の農場<span>「井上ファーム」</span>を所有しています。<br>めいっぱいの愛情を込めて育て、一匹一匹泣きながら屠殺しています。</br>緑の中で元気いっぱいに育った栄養たっぷりの豚肉を、どうぞお召し上がりください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menu">
+        <div class="inner">
+            <h1 class="sc_title">お品書き</h1>
+            <div class="line"></div>
+            <p class="menu_text">あらゆる豚料理をご用意しております。ぜひご賞味ください。</p>
+            <div class="menu_img_wrap">
+                <div class="menu_img one"><img src="./img/menu1.png" alt=""></div>
+                <div class="menu_img second"><img src="./img/menu4.png" alt=""></div>
+                <div class="menu_img three"><img src="./img/menu2.png" alt=""></div>
+                <div class="menu_img four"><img src="./img/menu3.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+    <section id="access">
+        <h1 class="sc_title">アクセス</h1>
+        <div class="line"></div>
+        <div class="ac_wrap">
+            <div class="ac_map"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8662763504985!2d139.70871141555574!3d35.72950713492969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5d4043e0dd%3A0x213775d25d2b034d!2z5rGg6KKL6aeF!5e0!3m2!1sja!2sjp!4v1574852653771!5m2!1sja!2sjp"
+                    frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+            <div class=" ac_addres_wrap">
+                <p class="ac_addres">東京都池袋123-4-5 イノウエビル34階<br>池袋駅から徒歩10秒</br></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <p class="license">Copyright © Inoue Corporation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

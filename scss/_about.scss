@@ -1,0 +1,74 @@
+#about {
+    @include sectionbase;
+    .about_wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        .slideshow {
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            background-color: white;
+            height: 49%;
+            margin-top: 70px;
+            box-shadow: 0 0 30px black;
+            position: absolute;
+            z-index: 20;
+            top: 10%;
+            #slide_wrap {
+                
+                position: relative;
+                overflow: hidden;
+            }
+            .slide_item {
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                transform:  scale(1);  
+                transition: opacity 1s linear, 
+                transform 6.3s;
+                & img {
+                    height: 100%;
+                    width: 100%;
+                }
+                &:first-child {
+                position: relative!important;
+                }
+                &.active {
+                    opacity: 1;      
+                }
+                &.zoom {
+                    transform:  scale(1.2);
+                }
+            }
+        }
+        
+        .about_content {
+            width: 100%;
+            padding: 400px 50px 62px 50px;
+            margin-top: 255px;
+            background-color: $wrap_bgc;
+            position: relative;
+            z-index: 10;
+            .ac_text {
+                @include font(calc(112.5% + 0.2vw), $fontcolor);
+                width: 100%;
+                text-align: center;
+                line-height: 50px;
+                position: absolute;
+                z-index: 20;
+                top:250px;
+                left: 0;
+                & span {
+                    @include font (3vw, $fontcolor);
+                }
+            }
+        }
+    }
+
+}

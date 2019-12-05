@@ -1,0 +1,44 @@
+#menu {
+    @include sectionbase;
+    .menu_text {
+        @include font(18px, $fontcolor);
+        text-align: center;
+        margin-top: 70px;
+    }
+    .menu_img_wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        .menu_img {
+            overflow: hidden;
+        }
+        .one {
+            width: 60%;
+            margin-bottom: 10px;
+            & img {
+                @include size;              
+            }
+        }
+        .second {
+            width: 39%;
+            margin-bottom: 10px;
+            & img {
+                @include size;
+            }
+        }
+        .three {
+            width: 67%;
+            & img {
+                @include size;
+            }
+        }
+        .four {
+            width: 32%;
+            & img {
+                @include size;
+            }
+        }
+    }
+}

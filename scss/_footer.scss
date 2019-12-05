@@ -1,0 +1,15 @@
+footer {
+    background-color: black;
+    padding: 170px 0 80px 0;
+    .license {
+        @include font (18px,white);
+        text-align: center;
+        &::before{
+            display: block;
+            content: "";
+            width: 100%;
+            border-top: 1px solid white;
+            margin-bottom: 68px;
+        }
+    }
+}
